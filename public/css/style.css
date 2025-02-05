@@ -1,0 +1,19 @@
+.dt-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.date-range-filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.date-range-filter input {
+    margin-left: 10px;
+}
+
+tfoot {
+    font-weight: bold;
+}
