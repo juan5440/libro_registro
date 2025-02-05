@@ -112,7 +112,7 @@
                     <th colspan="3" style="text-align: right;">Totales:</th>
                     <th id="totalDebe"></th>
                     <th id="totalHaber"></th>
-                    <th></th>
+                    <th id="totalSaldo"></th>
                 </tr>
             </tfoot>
         </table>
@@ -205,6 +205,10 @@
                 // Mostrar los totales en el footer
                 $('#totalDebe').html(totalDebe.toFixed(2));
                 $('#totalHaber').html(totalHaber.toFixed(2));
+
+                 // Calcular el saldo (totalDebe - totalHaber)
+                var saldo = totalDebe - totalHaber;
+                $('#totalSaldo').html(saldo.toFixed(2));
             }
         });
 
