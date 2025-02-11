@@ -13,8 +13,6 @@
 
     <link rel="stylesheet" type="text/css" href="../public/css/buttons.bootstrap4.min.css">
 
-    <link rel="stylesheet" type="text/css" href="../public/css/buttons.bootstrap4.min.css">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../public/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" "/>
@@ -24,9 +22,7 @@
 <<<<<<< HEAD
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="../public/css/modo_oscuro.css">
-=======
-    <link rel="stylesheet" href="../public/css/styles.css">
->>>>>>> 0047e6d2ad0aec210ba961115f4ab15c78665bec
+
 </head>
 
 <body>
@@ -110,12 +106,8 @@
                     <th colspan="3" style="text-align: right;">Totales:</th>
                     <th id="totalDebe"></th>
                     <th id="totalHaber"></th>
-<<<<<<< HEAD
                     <th id="totalSaldo"></th>
                     <th></th>
-=======
-                    <th id="totalSaldo"></tth
->>>>>>> 0047e6d2ad0aec210ba961115f4ab15c78665bec
                 </tr>
             </tfoot>
         </table>
@@ -143,17 +135,13 @@
     <!-- SweetAlert2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../public/js/script.js"></script>
-
-<<<<<<< HEAD
     <!-- Script personalizado -->
   <script src="../public/js/modo_oscuro.js"></script>
 </body>
 
 </html>
-=======
-    <!-- Inicializar DataTables con Botones, Filtro por Fechas y Totales -->
-<script type="text/javascript" src="../public/js/script.js"></script>
+
 </body>
 
 </html>
->>>>>>> 0047e6d2ad0aec210ba961115f4ab15c78665bec
+
