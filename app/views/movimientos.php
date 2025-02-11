@@ -13,8 +13,6 @@
 
     <link rel="stylesheet" type="text/css" href="../public/css/buttons.bootstrap4.min.css">
 
-    <link rel="stylesheet" type="text/css" href="../public/css/buttons.bootstrap4.min.css">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../public/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" "/>
@@ -25,8 +23,11 @@
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="../public/css/modo_oscuro.css">
 
+<<<<<<< HEAD
    
 
+=======
+>>>>>>> 6efb8b928f54979cef564329af637c43e663a2d1
 </head>
 
 <body>
@@ -147,4 +148,13 @@
 
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+
+</body>
+
+</html>
+
+>>>>>>> 6efb8b928f54979cef564329af637c43e663a2d1
