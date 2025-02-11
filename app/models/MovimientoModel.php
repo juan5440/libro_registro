@@ -1,17 +1,24 @@
 <?php
 
+// Incluir el archivo de configuración de la base de datos
 require_once __DIR__ . '/../../config/database.php';
 
 class MovimientoModel {
     private PDO $db;
 
     public function __construct() {
+
+        // Obtener la conexión a la base de datos
+
         $this->db = getDB();
     }
 
     // Obtener todos los movimientos
     public function getAllMovimientos(): array {
+
         $stmt = $this->db->query("SELECT * FROM movimientos ORDER BY fecha ASC");
+
+        $stmt = $this->db->query("SELECT * FROM movimientos ORDER BY fecha DESC");
         return $stmt->fetchAll();
     }
 
@@ -23,6 +30,7 @@ class MovimientoModel {
         $stmt = $this->db->prepare("INSERT INTO movimientos (fecha, factura, descripcion, debe, haber, saldo) VALUES (?, ?, ?, ?, ?, ?)");
         $stmt->execute([$fecha, $factura, $descripcion, $debe, $haber, $saldo]);
     }
+
 
     // Obtener un movimiento por ID
     public function getMovimientoById(int $id): ?array {
@@ -96,6 +104,7 @@ class MovimientoModel {
             $stmt->execute([$saldoActual, $movimiento['id']]);
         }
     }
+
 
     // Obtener el último saldo registrado
     private function getLastSaldo(): float {

@@ -10,7 +10,11 @@
     <!-- DataTables CSS -->
     <link rel="stylesheet" type="text/css" href="../public/css/dataTables.bootstrap4.min.css">
     <!-- Buttons CSS -->
+
     <link rel="stylesheet" type="text/css" href="../public/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../public/css/buttons.bootstrap4.min.css">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../public/css/all.min.css">
     <!-- CSS personalizado -->
@@ -42,7 +46,7 @@
         <h1 class="mb-4">Registro de Movimientos</h1>
         <form action="index.php?action=add" method="POST">
             <div class="form-row">
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-3">
                     <label for="fecha">Fecha</label>
                     <input type="date" class="form-control" id="fecha" name="fecha" required>
                 </div>
@@ -50,7 +54,7 @@
                     <label for="factura">Factura</label>
                     <input type="text" class="form-control" id="factura" name="factura" required>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label for="descripcion">Descripción</label>
                     <input type="text" class="form-control" id="descripcion" name="descripcion" required>
                 </div>
@@ -86,7 +90,9 @@
                     <th>Debe</th>
                     <th>Haber</th>
                     <th>Saldo</th>
+
                     <th>Acciones</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -98,12 +104,14 @@
                     <td><?= number_format($movimiento['debe'], 2) ?></td>
                     <td><?= number_format($movimiento['haber'], 2) ?></td>
                     <td><?= number_format($movimiento['saldo'], 2) ?></td>
+
                     <td>
                         <a href="index.php?action=edit&id=<?= $movimiento['id'] ?>"
                             class="btn btn-warning btn-sm">Editar</a>
                         <a href="index.php?action=delete&id=<?= $movimiento['id'] ?>" class="btn btn-danger btn-sm"
                             onclick="return confirm('¿Estás seguro de eliminar este movimiento?')">Eliminar</a>
                     </td>
+
                 </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -112,7 +120,7 @@
                     <th colspan="3" style="text-align: right;">Totales:</th>
                     <th id="totalDebe"></th>
                     <th id="totalHaber"></th>
-                    <th></th>
+                    <th id="totalSaldo"></tth
                 </tr>
             </tfoot>
         </table>
@@ -146,22 +154,27 @@
             buttons: [{
                     extend: 'excel', // Botón para exportar a Excel
                     text: '<i class="fas fa-file-excel"></i> Excel', // Icono y texto
+
                     className: 'btn btn-success',
                     exportOptions: {
                         columns: ':not(:last-child)' // Excluir la última columna (acciones)
                     }
+
                 },
                 {
                     extend: 'pdf', // Botón para exportar a PDF
                     text: '<i class="fas fa-file-pdf"></i> PDF', // Icono y texto
+
                     className: 'btn btn-danger',
                     exportOptions: {
                         columns: ':not(:last-child)' // Excluir la última columna (acciones)
                     }
+
                 },
                 {
                     extend: 'print', // Botón para imprimir
                     text: '<i class="fas fa-print"></i> Imprimir', // Icono y texto
+
                     className: 'btn btn-info',
                     exportOptions: {
                         columns: ':not(:last-child)' // Excluir la última columna (acciones)
@@ -205,6 +218,10 @@
                 // Mostrar los totales en el footer
                 $('#totalDebe').html(totalDebe.toFixed(2));
                 $('#totalHaber').html(totalHaber.toFixed(2));
+
+                // Calcular el saldo (totalDebe - totalHaber)
+                var saldo = totalDebe - totalHaber;
+                $('#totalSaldo').html(saldo.toFixed(2));
             }
         });
 
@@ -219,5 +236,5 @@
     });
     </script>
 </body>
-// aplicando modificaciones a github
+
 </html>

@@ -30,6 +30,7 @@ class MovimientoController {
         }
     }
 
+
     // Editar un movimiento
     public function edit(): void {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -65,4 +66,5 @@ class MovimientoController {
         header('Location: index.php');
         exit;
     }
+
 }
