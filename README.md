@@ -24,6 +24,12 @@ El sistema desarrollado es una aplicación web basada en el patrón **MVC (Model
 7. **Cálculo Automático de Totales:**
    - El sistema calcula automáticamente los totales de las columnas "Debe" y "Haber" para la página actual de la tabla, proporcionando una visión rápida del balance financiero.
 
+8. **Modo Oscuro/Claro:**
+   - El sistema ahora incluye un botón en la esquina inferior derecha que permite a los usuarios alternar entre el modo oscuro y claro. Esta funcionalidad mejora la experiencia del usuario, especialmente en entornos con poca luz, y se mantiene la preferencia del usuario incluso después de recargar la página.
+
+9. **Alertas Interactivas con SweetAlert2:**
+   - Se integró **SweetAlert2** para mostrar alertas interactivas y amigables al realizar acciones como guardar, actualizar o eliminar movimientos. Esto mejora la retroalimentación visual y la experiencia del usuario.
+
 ---
 
 ### **Herramientas Utilizadas para el Desarrollo**
@@ -38,6 +44,7 @@ El desarrollo del sistema se realizó utilizando tecnologías modernas y herrami
 - **Bootstrap 4:** Se utilizó Bootstrap para crear una interfaz responsive y moderna, asegurando que el sistema sea accesible desde dispositivos móviles y de escritorio.
 - **jQuery:** Se integró jQuery para simplificar la manipulación del DOM y mejorar la interacción con elementos dinámicos, como los botones de filtrado y exportación.
 - **DataTables:** Esta biblioteca de JavaScript se empleó para mejorar la funcionalidad de las tablas, permitiendo la paginación, búsqueda, ordenamiento y exportación de datos.
+- **SweetAlert2:** Se integró SweetAlert2 para mostrar alertas interactivas y mejorar la experiencia del usuario al realizar acciones críticas como guardar, actualizar o eliminar movimientos.
 
 #### **3. Base de Datos:**
 - **MySQL:** La base de datos fue implementada utilizando MySQL, un sistema de gestión de bases de datos relacional ampliamente utilizado. La tabla `movimientos` almacena todos los registros financieros, incluyendo campos como `id`, `fecha`, `factura`, `descripcion`, `debe`, `haber` y `saldo`.
@@ -79,11 +86,31 @@ La estructura del proyecto sigue una organización clara basada en el patrón MV
 
 ---
 
+### **Nuevas Características y Mejoras**
+
+1. **Modo Oscuro/Claro:**
+   - Se agregó un botón en la esquina inferior derecha que permite a los usuarios alternar entre el modo oscuro y claro. Esta funcionalidad mejora la experiencia del usuario, especialmente en entornos con poca luz, y se mantiene la preferencia del usuario incluso después de recargar la página.
+
+2. **Alertas Interactivas con SweetAlert2:**
+   - Se integró **SweetAlert2** para mostrar alertas interactivas y amigables al realizar acciones como guardar, actualizar o eliminar movimientos. Esto mejora la retroalimentación visual y la experiencia del usuario.
+
+3. **Mejoras en la Interfaz de Usuario:**
+   - Se optimizaron los estilos CSS para garantizar que los botones y otros elementos mantengan sus colores originales en ambos modos (oscuro y claro), mejorando la coherencia visual.
+
+4. **Persistencia del Modo Oscuro/Claro:**
+   - La preferencia del usuario respecto al modo oscuro o claro se guarda en el `localStorage` del navegador, lo que permite que la configuración se mantenga incluso después de recargar la página.
+
+---
+
 ### **Conclusión**
 
-Este sistema de registro de movimientos financieros es una solución práctica y eficiente para gestionar transacciones de manera organizada. Gracias a su diseño modular basado en el patrón MVC y el uso de tecnologías modernas como PHP, MySQL, Bootstrap y DataTables, el sistema es escalable, fácil de mantener y adaptable a futuras mejoras. Además, las herramientas utilizadas garantizan un desarrollo robusto y una experiencia de usuario fluida.
+Este sistema de registro de movimientos financieros es una solución práctica y eficiente para gestionar transacciones de manera organizada. Gracias a su diseño modular basado en el patrón MVC y el uso de tecnologías modernas como PHP, MySQL, Bootstrap, DataTables y SweetAlert2, el sistema es escalable, fácil de mantener y adaptable a futuras mejoras. Las nuevas características, como el modo oscuro/claro y las alertas interactivas, mejoran significativamente la experiencia del usuario y hacen que el sistema sea más intuitivo y amigable.
 
 
 
-![image](https://github.com/user-attachments/assets/d6d4cda0-952b-4776-acbe-63ef5e676490)
+![image](https://github.com/user-attachments/assets/61184420-b41c-4d0d-a14f-8a028cb2d9f6)
+
+![image](https://github.com/user-attachments/assets/ea50490d-3bfd-4b05-b26a-629928967604)
+
+
 
