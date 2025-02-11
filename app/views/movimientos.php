@@ -10,15 +10,23 @@
     <!-- DataTables CSS -->
     <link rel="stylesheet" type="text/css" href="../public/css/dataTables.bootstrap4.min.css">
     <!-- Buttons CSS -->
+
     <link rel="stylesheet" type="text/css" href="../public/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../public/css/buttons.bootstrap4.min.css">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../public/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" "/>
     <!-- SweetAlert2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <!-- CSS personalizado -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="../public/css/modo_oscuro.css">
+=======
+    <link rel="stylesheet" href="../public/css/styles.css">
+>>>>>>> 0047e6d2ad0aec210ba961115f4ab15c78665bec
 </head>
 
 <body>
@@ -72,7 +80,9 @@
                     <th>Debe</th>
                     <th>Haber</th>
                     <th>Saldo</th>
+
                     <th>Acciones</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -84,12 +94,14 @@
                     <td><?= number_format($movimiento['debe'], 2) ?></td>
                     <td><?= number_format($movimiento['haber'], 2) ?></td>
                     <td><?= number_format($movimiento['saldo'], 2) ?></td>
+
                     <td>
                         <a href="index.php?action=edit&id=<?= $movimiento['id'] ?>"
                             class="btn btn-warning btn-sm">Editar</a>
                         <a href="index.php?action=delete&id=<?= $movimiento['id'] ?>" class="btn btn-danger btn-sm"
                             onclick="confirmDelete(event, this.href)">Eliminar</a>
                     </td>
+
                 </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -98,8 +110,12 @@
                     <th colspan="3" style="text-align: right;">Totales:</th>
                     <th id="totalDebe"></th>
                     <th id="totalHaber"></th>
+<<<<<<< HEAD
                     <th id="totalSaldo"></th>
                     <th></th>
+=======
+                    <th id="totalSaldo"></tth
+>>>>>>> 0047e6d2ad0aec210ba961115f4ab15c78665bec
                 </tr>
             </tfoot>
         </table>
@@ -128,8 +144,16 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../public/js/script.js"></script>
 
+<<<<<<< HEAD
     <!-- Script personalizado -->
   <script src="../public/js/modo_oscuro.js"></script>
 </body>
 
 </html>
+=======
+    <!-- Inicializar DataTables con Botones, Filtro por Fechas y Totales -->
+<script type="text/javascript" src="../public/js/script.js"></script>
+</body>
+
+</html>
+>>>>>>> 0047e6d2ad0aec210ba961115f4ab15c78665bec

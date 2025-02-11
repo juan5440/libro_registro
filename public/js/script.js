@@ -83,4 +83,8 @@ $(document).ready(function() {
         // Filtrar por la columna de fecha (columna 0)
         table.column(0).search(fechaInicio + '|' + fechaFin, true, false).draw();
     });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 0047e6d2ad0aec210ba961115f4ab15c78665bec
