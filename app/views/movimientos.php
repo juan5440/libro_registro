@@ -22,12 +22,6 @@
 
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="../public/css/modo_oscuro.css">
-
-<<<<<<< HEAD
-   
-
-=======
->>>>>>> 6efb8b928f54979cef564329af637c43e663a2d1
 </head>
 
 <body>
@@ -148,13 +142,4 @@
 
 </body>
 
-<<<<<<< HEAD
 </html>
-=======
-</html>
-
-</body>
-
-</html>
-
->>>>>>> 6efb8b928f54979cef564329af637c43e663a2d1
