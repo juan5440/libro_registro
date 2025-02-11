@@ -1,30 +1,31 @@
 $(document).ready(function() {
+    // Verificar si la tabla ya está inicializada
+    if ($.fn.DataTable.isDataTable('#movimientosTable')) {
+        $('#movimientosTable').DataTable().destroy(); // Destruir la instancia existente
+    }
+
+    // Inicializar la tabla
     var table = $('#movimientosTable').DataTable({
         dom: '<"row"<"col-sm-12 col-md-6"B><"col-sm-12 col-md-6"f>>rt<"row"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>',
         buttons: [{
                 extend: 'excel', // Botón para exportar a Excel
                 text: '<i class="fas fa-file-excel"></i> Excel', // Icono y texto
-
                 className: 'btn btn-success',
                 exportOptions: {
                     columns: ':not(:last-child)' // Excluir la última columna (acciones)
                 }
-
             },
             {
                 extend: 'pdf', // Botón para exportar a PDF
                 text: '<i class="fas fa-file-pdf"></i> PDF', // Icono y texto
-
                 className: 'btn btn-danger',
                 exportOptions: {
                     columns: ':not(:last-child)' // Excluir la última columna (acciones)
                 }
-
             },
             {
                 extend: 'print', // Botón para imprimir
                 text: '<i class="fas fa-print"></i> Imprimir', // Icono y texto
-
                 className: 'btn btn-info',
                 exportOptions: {
                     columns: ':not(:last-child)' // Excluir la última columna (acciones)
@@ -32,24 +33,20 @@ $(document).ready(function() {
             }
         ],
         language: {
-            url: '../public/js/es-ES.json' // Español
+            url: './es-ES.json' // Español
         },
         footerCallback: function(row, data, start, end, display) {
             var api = this.api();
 
             // Función para limpiar y convertir a número
             function convertirANumero(valor) {
-                // Eliminar comas y otros caracteres no numéricos
-                valor = valor.replace(/[^0-9.-]/g, '');
-                // Convertir a número flotante
+                valor = valor.replace(/[^0-9.-]/g, ''); // Eliminar comas y otros caracteres no numéricos
                 return parseFloat(valor) || 0; // Si no es un número válido, devolver 0
             }
 
             // Calcular el total de la columna "Debe" (columna 3)
             var totalDebe = api
-                .column(3, {
-                    page: 'current'
-                })
+                .column(3, { page: 'current' })
                 .data()
                 .reduce(function(a, b) {
                     return a + convertirANumero(b);
@@ -57,9 +54,7 @@ $(document).ready(function() {
 
             // Calcular el total de la columna "Haber" (columna 4)
             var totalHaber = api
-                .column(4, {
-                    page: 'current'
-                })
+                .column(4, { page: 'current' })
                 .data()
                 .reduce(function(a, b) {
                     return a + convertirANumero(b);
@@ -83,8 +78,4 @@ $(document).ready(function() {
         // Filtrar por la columna de fecha (columna 0)
         table.column(0).search(fechaInicio + '|' + fechaFin, true, false).draw();
     });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 0047e6d2ad0aec210ba961115f4ab15c78665bec
