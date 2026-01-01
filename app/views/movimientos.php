@@ -59,14 +59,17 @@
         </form>
         <br>
         <!-- Filtro por rango de fechas -->
-        <div class="date-range-filter col-md-9">
+        <div class="date-range-filter col-md-12">
             <label for="fechaInicio">Fecha Inicio:</label>
             <input type="date" id="fechaInicio" class="form-control">
             <label for="fechaFin">Fecha Fin:</label>
             <input type="date" id="fechaFin" class="form-control">
             <div><button id="filtrarFecha" class="btn btn-secondary">Filtrar</button></div>
         </div>
+        <br>
         <table id="movimientosTable" class="table table-bordered mt-4">
+            <br>
+            <br>
             <thead>
                 <tr>
                     <th>Fecha</th>
